@@ -1,15 +1,3 @@
-// var App = () => (
-//   <div>
-//     <Nav />
-//     <div className="col-md-7">
-//       <VideoPlayer video={exampleVideoData}/>
-//     </div>
-//     <div className="col-md-5">
-//       <VideoList videos={exampleVideoData}/>
-//     </div>
-//   </div>
-// );
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -18,10 +6,11 @@ class App extends React.Component {
       videos: exampleVideoData
     };
   }
-  onTitleClick(video, two, three) {
+  onTitleClick(video) {
     console.log(this);
+    console.log(video);
     this.setState({
-      video: video.target
+      video: video
     });
   }
   render() {
